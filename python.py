@@ -1,6 +1,3 @@
-
-
-
 # PYTHON ....
 # Telegram : @SOFY_AKM - @YYYY02 
 # instagram : 5yyyw
@@ -184,7 +181,7 @@ def start(m):
  ✦ اختر من الاسفل ↓ 
   """
   
-  bot.send_message(id,text,parse_mode='markdown', disable_web_page_preview='true',reply_markup=Start())
+  bot.send_message(id,text,parse_mode='markdown', disable_web_page_preview=True,reply_markup=Start())
 
 	
 @bot.callback_query_handler(lambda call:True)
@@ -219,14 +216,14 @@ def call(call):
   	loop = False
   	
   	bot.delete_message(id,call.message.message_id)
-  	bot.send_message(id,text,reply_markup=Start(),parse_mode='markdown', disable_web_page_preview='true')
+  	bot.send_message(id,text,reply_markup=Start(),parse_mode='markdown', disable_web_page_preview=True)
   if call.data == "back":
-  	bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text,reply_markup=Start(),parse_mode='markdown', disable_web_page_preview='true')
+  	bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text,reply_markup=Start(),parse_mode='markdown', disable_web_page_preview=True)
   	
   
   #~~~~~~~~~~~~~~~
   if call.data == 'num':
-  	bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text,reply_markup=number(),parse_mode='markdown', disable_web_page_preview='true')
+  	bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text,reply_markup=number(),parse_mode='markdown', disable_web_page_preview=True)
   
   
   
@@ -245,12 +242,12 @@ def call(call):
 '''
 	  	if login_insta().login(username,passw):
 	  		done+=1
-	  		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview='true')
-	  		bot.send_message(id,text = text3,parse_mode='markdown', disable_web_page_preview='true')
+	  		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview=True)
+	  		bot.send_message(id,text = text3,parse_mode='markdown', disable_web_page_preview=True)
 	  	else:
 	  		bad+=1
 	  		try:
-	  			bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview='true')
+	  			bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview=True)
 	  		except Exception as ex:
 	  			print(ex)
   	
@@ -268,12 +265,12 @@ def call(call):
 '''
 	  	if login_insta().login(username,passw):
 	  		done+=1
-	  		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview='true')
-	  		bot.send_message(id,text = text3,parse_mode='markdown', disable_web_page_preview='true')
+	  		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview=True)
+	  		bot.send_message(id,text = text3,parse_mode='markdown', disable_web_page_preview=True)
 	  	else:
 	  		bad+=1
 	  		try:
-	  			bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview='true')
+	  			bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview=True)
 	  		except Exception as ex:
 	  			pass
   	
@@ -291,12 +288,12 @@ def call(call):
 '''
 	  	if login_insta().login(username,passw):
 	  		done+=1
-	  		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview='true')
-	  		bot.send_message(id,text = text3,parse_mode='markdown', disable_web_page_preview='true')
+	  		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview=True)
+	  		bot.send_message(id,text = text3,parse_mode='markdown', disable_web_page_preview=True)
 	  	else:
 	  		bad+=1
 	  		try:
-	  			bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview='true')
+	  			bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,username,passw),parse_mode='markdown', disable_web_page_preview=True)
 	  		except Exception as ex:
 	  			pass
   #~~~~~~~~~~~~~~~
@@ -327,12 +324,12 @@ def call(call):
 '''
 	  	if login_insta().login(u,password):
 	  		done+=1
-	  		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,u,password),parse_mode='markdown', disable_web_page_preview='true')
-	  		bot.send_message(id,text = text3,parse_mode='markdown', disable_web_page_preview='true')
+	  		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,u,password),parse_mode='markdown', disable_web_page_preview=True)
+	  		bot.send_message(id,text = text3,parse_mode='markdown', disable_web_page_preview=True)
 	  	else:
 	  		bad+=1
 	  		try:
-	  			bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,u,password),parse_mode='markdown', disable_web_page_preview='true')
+	  			bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=text2,reply_markup=keyboard(done,bad,num,u,password),parse_mode='markdown', disable_web_page_preview=True)
 	  		except Exception as ex:
 	  			pass
   
